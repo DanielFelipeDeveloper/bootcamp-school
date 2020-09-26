@@ -1,0 +1,70 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+  <form class="card" method="POST" action="/teachers">
+    <section class="avatar" 
+    style="background: url(https://source.unsplash.com/collection/332741/500x500) no-repeat center center / cover "
+    >
+    </section>
+
+    <section class="details">
+
+      <h3>New Teacher</h3>
+
+      <div class="item">
+        <div>Avatar url</div>
+        <input 
+          type="url"
+          name="avatar_url"
+          placeholder="https://"
+        >
+      </div>
+
+      <div class="item">
+        <div>Name</div>
+        <input 
+          type="text"
+          name="name"
+        >
+      </div>
+      
+      <div class="item">
+        <div>Date of birth</div>
+        <input 
+          type="date"
+          name="birth"
+        >
+      </div>
+      
+      <div class="item">
+        <div>Education Level</div>
+        <select name="schooling">
+          <option value="highSchool">Complete High School</option>
+          <option value="higherEducation">Complete Higher Education</option>
+          <option value="masters">Master's Degree</option>
+          <option value="doctorate">Doctorate Degree</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <div>Type of Class</div>
+        <div>
+          <span><input type="radio" name="accompaniment" value="P" checked>Presential</span>
+          <span><input type="radio" name="accompaniment" value="A">Aloof</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Area of Acting</div>
+        <input 
+          type="text" 
+          name="acting"
+          placeholder="separate the areas of acting with a comma ','"
+        >
+      </div>
+
+      <button type="submit">Salvar</button>
+
+    </section>
+  </form>
+{% endblock content %}
