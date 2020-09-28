@@ -3,7 +3,7 @@
 {% block content %}
   <form class="card" method="POST" action="/teachers">
     <section class="avatar" 
-    style="background: url(https://source.unsplash.com/collection/332741/500x500) no-repeat center center / cover "
+    style="background: url(https://source.unsplash.com/collection/489203/500x500) no-repeat center center / cover "
     >
     </section>
 
@@ -38,19 +38,19 @@
       
       <div class="item">
         <div>Grau de Escolaridade</div>
-        <select name="schooling">
-          <option value="ensinoMedio">Ensino Médio Completo</option>
-          <option value="superiorCompleto">Ensino Superior Completo</option>
-          <option value="mestrado">Mestrado</option>
-          <option value="doutorado">Doutorado</option>
+        <select name="graduation">
+          <option value="medio">Ensino Médio Completo</option>
+          <option value="superior">Ensino Superior Completo</option>
+          <option value="mestre">Mestrado</option>
+          <option value="doutor">Doutorado</option>
         </select>
       </div>
 
       <div class="item">
-        <div>Type de aula</div>
+        <div>Tipo de aula</div>
         <div>
-          <span><input type="radio" name="accompaniment" value="P" checked>Presencial</span>
-          <span><input type="radio" name="accompaniment" value="A">À distância</span>
+          <span><input type="radio" name="typeClass" value="Presencial" checked>Presencial</span>
+          <span><input type="radio" name="typeClass" value="Á distância">À distância</span>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
         <div>Area de Atuação</div>
         <input 
           type="text" 
-          name="actingArea"
+          name="accompaniment"
           placeholder="Separe as áreas de atuação por virgula ','"
         >
       </div>

@@ -6,8 +6,9 @@ routes.get('/', (req, res) => {
   return res.redirect("/teachers")
 })
 
-routes.get('/teachers', teachers.show)
+routes.get('/teachers', teachers.index)
 routes.get('/teachers/create', teachers.create)
+routes.get('/teachers/:id', teachers.show)
 routes.post('/teachers', teachers.post)
 
 module.exports = routes
