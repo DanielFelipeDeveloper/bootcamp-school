@@ -10,7 +10,7 @@
     <section class="details">
       <h3>Editar Professor</h3>
       
-      <form action="/teachers?_method=PUT">
+      <form method="POST" action="/teachers?_method=PUT">
         {% include 'teachers/fields.njk' %}
         <input type="hidden" name="id" value={{teacher.id}}>
       </form>
