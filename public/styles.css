@@ -147,7 +147,8 @@ header {
   margin-top: 8px;
   margin-right: 4px;
   padding: 8px 16px;
-  font-size: 12px;
+  font-size: 12.5px;
+  vertical-align: center;
   background-color: var(--color-orange);
   color: var(--color-brown);
   border-radius: 16px;
@@ -171,7 +172,9 @@ select option{
 }
 
 input[type="radio"] {
-  width: 25px;
+  width: initial;
+  margin-right: 4px;
+  visibility: hidden;
 }
 
 input::placeholder {
@@ -196,3 +199,32 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
+input[type='radio']:after {
+  cursor: pointer;
+  transition: 0.5s;
+  width: 10.5px;
+  height: 10.5px;
+  border-radius: 15px;
+  top: -1px;
+  left: -2px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+}
+
+input[type='radio']:checked:after {
+  width: 10.5px;
+  height: 10.5px;
+  border-radius: 15px;
+  top: -1px;
+  left: -2px;
+  position: relative;
+  background-color: var(--color-green);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+}
