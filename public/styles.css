@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --color-white: #ffffff;
   --text-color: #e1e1e6;
@@ -47,7 +51,6 @@ header {
 
 .links a {
   position: relative;
-  text-decoration: none;
   color: var(--text-color);
 }
 
@@ -182,10 +185,13 @@ input::placeholder {
   font-weight: normal;
 }
 
+.card a,
 button[type="submit"] {
+  display: block;
   cursor: pointer;
   padding: 8px 32px;
   background-color: var(--color-blue);
+  text-align: center;
   color: white;
   border-radius: 4px;
   margin-top: 32px;
@@ -194,6 +200,7 @@ button[type="submit"] {
   transition: .5s;
 }
 
+.card a:hover,
 button[type="submit"]:hover {
   opacity: 0.9;
   transform: translateY(-2px);

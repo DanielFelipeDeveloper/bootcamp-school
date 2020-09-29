@@ -8,63 +8,9 @@
     </section>
 
     <section class="details">
-
       <h3>Novo Professor</h3>
 
-      <div class="item">
-        <div>Avatar url</div>
-        <input 
-          type="url"
-          name="avatar_url"
-          placeholder="https://"
-        >
-      </div>
-
-      <div class="item">
-        <div>Nome</div>
-        <input 
-          type="text"
-          name="name"
-        >
-      </div>
-      
-      <div class="item">
-        <div>Data de Nascimento</div>
-        <input 
-          type="date"
-          name="birth"
-        >
-      </div>
-      
-      <div class="item">
-        <div>Grau de Escolaridade</div>
-        <select name="graduation">
-          <option value="medio">Ensino Médio Completo</option>
-          <option value="superior">Ensino Superior Completo</option>
-          <option value="mestre">Mestrado</option>
-          <option value="doutor">Doutorado</option>
-        </select>
-      </div>
-
-      <div class="item">
-        <div>Tipo de aula</div>
-        <div>
-          <span><input type="radio" name="typeClass" value="Presencial" checked>Presencial</span>
-          <span><input type="radio" name="typeClass" value="Á distância">À distância</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>Area de Atuação</div>
-        <input 
-          type="text" 
-          name="accompaniment"
-          placeholder="Separe as áreas de atuação por virgula ','"
-        >
-      </div>
-
-      <button type="submit">Salvar</button>
-
+      {% include 'teachers/fields.njk' %}
     </section>
   </form>
 {% endblock content %}

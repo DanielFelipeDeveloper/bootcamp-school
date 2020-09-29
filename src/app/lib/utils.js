@@ -13,7 +13,6 @@ module.exports = {
     return age
   },
   graduation(data) {
-
     switch(data) {
       case 'medio':
       return 'Ensino Médio'
@@ -28,6 +27,14 @@ module.exports = {
       return 'Doutorado'
       break
     }
-  }
+  },
+  date(timestamp) {
+    const date = new Date(timestamp)
 
+    year = date.getUTCFullYear()
+    month = `0${date.getUTCMonth() + 1}`.slice(-2)
+    day = `0${date.getUTCDate()}`.slice(-2)
+
+    return `${year}-${month}-${day}`
+  }
 }
