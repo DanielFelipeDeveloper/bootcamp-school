@@ -85,7 +85,7 @@ module.exports = {
 
     return res.render(`teachers/edit`, { teacher })
   },
-  put(req, res) {
+  update(req, res) {
     const { id } = req.body
     let index = 0
 
@@ -99,7 +99,8 @@ module.exports = {
     const teacher = {
       ...foundTeacher,
       ...req.body,
-      birth: Date.parse(req.body.birth)
+      birth: Date.parse(req.body.birth),
+      id: Number(req.body.id)
     }
 
     data.teachers[index] = teacher
